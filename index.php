@@ -74,7 +74,8 @@
               <div class="col-md-4">
               <?php
               include_once($filename);
-            } else {
+            } 
+            else {
               ?>
               <div class="col-md-12">
               <p class="ml-3 pt-3 pb-3">

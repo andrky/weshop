@@ -179,7 +179,15 @@ body {
 }
 
 #form {
-  margin: 30px 0px;
+  margin: 20px 0px;
+}
+
+#notif {
+  background-color: #1c658c;
+  color: white;
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 3px;
 }
 
 #form label {
@@ -187,6 +195,10 @@ body {
 }
 
 #form input {
+  font-size: 15px;
+}
+
+#form textarea {
   font-size: 15px;
 }
 
@@ -203,6 +215,9 @@ body {
 
 @media (max-width: 576px) {
   #form {
-    margin: 30px 30px;
+    margin: 20px 20px;
+  }
+  #notif {
+    margin: 20px 20px;
   }
 }
