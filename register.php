@@ -54,5 +54,3 @@ else if($emailuse == "emailuse") {
     </div>
   </form>
 </div>
-
-tes
