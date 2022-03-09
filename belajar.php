@@ -7,6 +7,6 @@
   <title>Belajar GIT</title>
 </head>
 <body>
-  Tambah Data Tester Sebelum Di Reset
+  Pertama Commit Nih
 </body>
 </html>
