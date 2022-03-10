@@ -66,10 +66,10 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
               else{
                 echo "
                 <li class='nav-item'>
-                  <a class='nav-link btn' aria-current='page' href='".BASE_URL."index.php?page=login'>Login</a>
+                  <a class='nav-link btn' aria-current='page' href='".BASE_URL. "index.php?page=login'>Login</a>
                 </li>
                 <li class='nav-item'>
-                  <a class='nav-link btn href='".BASE_URL."index.php?page=register'>Register</a>
+                  <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "index.php?page=register'>Register</a>
                 </li>";
               }
               ?>
