@@ -6,8 +6,8 @@
   $email = $_POST['email'];
   $phone = $_POST['phone'];
   $alamat = $_POST['alamat'];
-  $password = $_POST['password'];
-  $re_password = $_POST['re_password'];
+  $password = md5($_POST['password']);
+  $re_password = md5($_POST['re_password']);
   $level = "customer";
   $status = "on";
 

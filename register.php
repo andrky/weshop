@@ -1,26 +1,30 @@
 <?php
-$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
-$password = isset($_GET['notif']) ? $_GET['notif'] : false;
-$emailuse = isset($_GET['notif']) ? $_GET['notif'] : false;
-$nama_lengkap = isset($_GET['nama_lengkap']) ? ($_GET['nama_lengkap']) : false;
-$email = isset($_GET['email']) ? ($_GET['email']) : false;
-$phone = isset($_GET['phone']) ? ($_GET['phone']) : false;
-$alamat = isset($_GET['alamat']) ? ($_GET['alamat']) : false;
-if($notif == "require"){
-  echo "<p id='notif'>
-                Maaf, mohon isi semua data!
-              </p>";
-}
-else if($notif == "password"){
-  echo "<p id='notif'>
-                Maaf, password yang di isi harus sama!
-              </p>";
-} 
-else if($emailuse == "emailuse") {
-  echo "<p id='notif'>
-                Maaf, e-mail yang Anda gunakan sudah terdaftar!
-              </p>";
-}
+  if ($user_id) {
+      header("location:" . BASE_URL);
+  }
+
+  $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+  $password = isset($_GET['notif']) ? $_GET['notif'] : false;
+  $emailuse = isset($_GET['notif']) ? $_GET['notif'] : false;
+  $nama_lengkap = isset($_GET['nama_lengkap']) ? ($_GET['nama_lengkap']) : false;
+  $email = isset($_GET['email']) ? ($_GET['email']) : false;
+  $phone = isset($_GET['phone']) ? ($_GET['phone']) : false;
+  $alamat = isset($_GET['alamat']) ? ($_GET['alamat']) : false;
+  if($notif == "require"){
+    echo "<p id='notif'>
+                  Maaf, mohon isi semua data!
+                </p>";
+  }
+  else if($notif == "password"){
+    echo "<p id='notif'>
+                  Maaf, password yang di isi harus sama!
+                </p>";
+  } 
+  else if($emailuse == "emailuse") {
+    echo "<p id='notif'>
+                  Maaf, e-mail yang Anda gunakan sudah terdaftar!
+                </p>";
+  }
 ?>
 
 <div id="form">
