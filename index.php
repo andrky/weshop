@@ -1,6 +1,11 @@
 <?php
-  include_once("function/helper.php");
-  $page = isset($_GET['page']) ? $_GET['page'] : false;
+session_start();
+include_once("function/helper.php");
+$page = isset($_GET['page']) ? $_GET['page'] : false;
+
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
+$nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
+$level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
 ?>
 
 <!DOCTYPE html>
@@ -44,13 +49,30 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
+
             <ul class="navbar-nav" id="nav1">
-              <li class="nav-item">
-                <a class="nav-link btn" aria-current="page" href="<?php echo BASE_URL . "index.php?page=login"; ?>">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn" href="<?php echo BASE_URL . "index.php?page=register"; ?>">Register</a>
-              </li>
+              <?php
+              if ($user_id) {
+                echo "<li class='nav-item'>
+                        <a class='nav-link btn' aria-current='page'>Hi $nama</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link btn' aria-current='page' href='".BASE_URL. "index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>
+                      </li>
+                      <li class='nav-item'>
+                        <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "logout.php'>Logout</a>
+                      </li>";
+              }
+              else{
+                echo "
+                <li class='nav-item'>
+                  <a class='nav-link btn' aria-current='page' href='".BASE_URL."index.php?page=login'>Login</a>
+                </li>
+                <li class='nav-item'>
+                  <a class='nav-link btn href='".BASE_URL."index.php?page=register'>Register</a>
+                </li>";
+              }
+              ?>
             </ul>
 
             <ul class="navbar-nav ml-auto" id="nav2">
@@ -67,35 +89,34 @@
 
     <div id="content">
       <div class="row justify-content-center">
+        <?php
+        $filename = "$page.php";
+        if (file_exists($filename)) {
+        ?>
+          <div class="col-md-4">
           <?php
-            $filename = "$page.php";
-            if(file_exists($filename)) {
-              ?>
-              <div class="col-md-4">
-              <?php
-              include_once($filename);
-            } 
-            else {
-              ?>
-              <div class="col-md-12">
+          include_once($filename);
+        } else {
+          ?>
+            <div class="col-md-12">
               <p class="ml-3 pt-3 pb-3">
                 Maaf, file tidak ada dalam sistem!
               </p>
             <?php
-            }
-          ?>
-        </div>
+          }
+            ?>
+            </div>
+          </div>
       </div>
-    </div>
 
-    <div id="footer">
-      <div class="row">
-        <div class="col-md-12 text-center">
-          <p>Copyrigt | M. Ananda Rizky Audriansyah</p>
+      <div id="footer">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyrigt | M. Ananda Rizky Audriansyah</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </body>
 
 </html>

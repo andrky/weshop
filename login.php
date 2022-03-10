@@ -1,10 +1,14 @@
 <?php
-$notif = isset($_GET['notif']) ? $_GET['notif'] : false;
-if ($notif == "true") {
-  echo "<p id='notif'>
-                Maaf, e-mail dan password anda tidak cocok!
-              </p>";
-}
+  if($user_id){
+    header("location:".BASE_URL);
+  }
+
+  $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+  if ($notif == "true") {
+    echo "<p id='notif'>
+                  Maaf, e-mail dan password anda tidak cocok!
+                </p>";
+  }
 ?>
 
 <div id="form">
