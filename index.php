@@ -57,16 +57,15 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
                         <a class='nav-link btn' aria-current='page'>Hi $nama</a>
                       </li>
                       <li class='nav-item'>
-                        <a class='nav-link btn' aria-current='page' href='".BASE_URL. "index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>
+                        <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "index.php?page=my_profile&module=pesanan&action=list'>My Profile</a>
                       </li>
                       <li class='nav-item'>
                         <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "logout.php'>Logout</a>
                       </li>";
-              }
-              else{
+              } else {
                 echo "
                 <li class='nav-item'>
-                  <a class='nav-link btn' aria-current='page' href='".BASE_URL. "index.php?page=login'>Login</a>
+                  <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "index.php?page=login'>Login</a>
                 </li>
                 <li class='nav-item'>
                   <a class='nav-link btn' aria-current='page' href='" . BASE_URL . "index.php?page=register'>Register</a>
@@ -87,36 +86,38 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
       </nav>
     </div>
 
-    <div id="content">
-      <div class="row justify-content-center">
-        <?php
-        $filename = "$page.php";
-        if (file_exists($filename)) {
-        ?>
-          <div class="col-md-4">
+    <div class="container-fluid px-0">
+      <!-- Content -->
+      <div class="row mx-0">
+        <div class="col-md-12 px-0">
           <?php
-          include_once($filename);
-        } else {
+          $filename = "$page.php";
+          if (file_exists($filename)) {
           ?>
-            <div class="col-md-12">
-              <p class="ml-3 pt-3 pb-3">
-                Maaf, file tidak ada dalam sistem!
-              </p>
-            <?php
+          <?php
+            include_once($filename);
+          } else {
+          ?>
+            <p class="ml-3 pt-3 pb-3">
+              Maaf, file tidak ada dalam sistem!
+            </p>
+          <?php
           }
-            ?>
-            </div>
-          </div>
+          ?>
+        </div>
       </div>
+    </div>
 
+    <div class="container-fluid px-0">
       <div id="footer">
-        <div class="row">
-          <div class="col-md-12 text-center">
+        <div class="row mx-0">
+          <div class="col-md-12 text-center px-0">
             <p>Copyrigt | M. Ananda Rizky Audriansyah</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </body>
 
 </html>
