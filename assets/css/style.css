@@ -134,7 +134,8 @@ body {
   color: #1c658c;
 }
 
-.container-fluid #content,#footer {
+.container-fluid #content,
+#footer {
   padding: 0px;
 }
 
@@ -223,5 +224,39 @@ body {
   }
   #notif {
     margin: 20px 20px;
+  }
+}
+
+#w-resp .nav-item {
+  padding: 5px;
+  text-align: justify;
+  margin: auto;
+}
+
+#sidebar {
+  background-color: #eeeeee;
+  overflow: hidden;
+}
+
+#sidebar #w-resp {
+  margin: 0px 34px;
+}
+
+#w-resp .nav-link {
+  color: #1e5474;
+  padding: 15px;
+}
+
+#w-resp .nav-link:hover {
+  background: #dbdbdb;
+  border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+  #sidebar #w-resp {
+    margin: 5px 5px;
+  }
+  #w-resp .nav-link {
+    padding: 8px 10px;
   }
 }

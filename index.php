@@ -86,6 +86,7 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
       </nav>
     </div>
 
+    <!-- Content -->
     <div class="container-fluid px-0">
       <!-- Content -->
       <div class="row mx-0">
@@ -108,6 +109,7 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
       </div>
     </div>
 
+    <!-- Footer -->
     <div class="container-fluid px-0">
       <div id="footer">
         <div class="row mx-0">
