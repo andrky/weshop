@@ -134,6 +134,10 @@ body {
   color: #1c658c;
 }
 
+.container-fluid #content,#footer {
+  padding: 0px;
+}
+
 #header {
   background-color: #eeeeee;
 }
