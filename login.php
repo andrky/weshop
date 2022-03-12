@@ -5,9 +5,16 @@
 
   $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
   if ($notif == "true") {
-    echo "<div class='row justify content-center'><div class='col-md-4'><p id='notif'>
+    echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
                     Maaf, e-mail dan password anda tidak cocok!
                   </p></div></div>";
+  }
+
+  $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+  if ($notif == "galog") {
+    echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+                      Maaf, anda harus login terlebih dahulu!
+                    </p></div></div>";
   }
 ?>
 
