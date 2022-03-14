@@ -45,13 +45,13 @@ if ($user_id) {
       </ul>
     </nav>
   </div>
-  <div class="col-md-9" id="isi">
+  <div class="col-md-9" id="konten">
     <?php
     $file = "module/$module/$action.php";
     if (file_exists($file)) {
       include_once($file);
     } else {
-      echo "<h3>Maaf, halaman tersebut tidak ditemukan</h3>";
+      echo "<div class='row justify-content-center'><div class='col-md-12'><p class='notifmargin'>Maaf, halaman tersebut tidak ditemukan!</p></div></div>";
     }
     ?>
   </div>
