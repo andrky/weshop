@@ -27,8 +27,9 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
   <script src="<?php echo BASE_URL . "assets/js/popper.min.js"; ?>"></script>
   <script src="<?php echo BASE_URL . "assets/js/bootstrap.min.js"; ?>"></script>
   <!-- Data Tables -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <title>Weshop | Toko Barang Elektronik</title>
 </head>
 

@@ -15,7 +15,7 @@
     </div>
 
     <div class="mb-3">
-      <button type="submit" class="btn btn-all">Add</button>
+      <button type="submit" class="btn btn-all" name="tambah">Add</button>
     </div>
   </form>
 </div>
