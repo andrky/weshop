@@ -1,3 +1,4 @@
+<div class="form">
   <div class="mt-3 mb-3">
     <a class="btn btn-all" href="<?php echo BASE_URL . "index.php?page=my_profile&module=kategori&action=form"; ?>">+ Tambah Kategori</a>
   </div>
@@ -35,8 +36,10 @@
   }
   ?>
 
-  <script>
-    $(document).ready(function() {
-      $('#example').DataTable();
-    });
-  </script>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#example').DataTable();
+  });
+</script>
