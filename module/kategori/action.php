@@ -4,10 +4,17 @@
 
   $kategori = $_POST['kategori'];
   $status = $_POST['status'];
-  $tambah = $_POST['tambah'];
+  $button = $_POST['button'];
+  
+  if($button == "Add"){
+    mysqli_query($conn, "INSERT INTO kategori(kategori, status)
+                                      VALUES('$kategori', '$status')");
+  }
+  else if($button == "Update"){
+    $kategori_id = $_GET['kategori_id'];
 
-  mysqli_query($conn, "INSERT INTO kategori(kategori, status)
-                                    VALUES('$kategori', '$status')");
-
+    mysqli_query($conn, "UPDATE kategori SET kategori='$kategori',
+                                status='$status' WHERE kategori_id='$kategori_id'");
+  }
   header("location:".BASE_URL."index.php?page=my_profile&module=kategori&action=list");
 ?>

@@ -200,7 +200,7 @@ body {
   color: white;
   padding: 10px;
   border-radius: 3px;
-  margin: 20px 0px;
+  /* margin: 20px 0px; */
 }
 
 .form label {
@@ -219,6 +219,7 @@ body {
   background-color: #bb6464;
   color: white;
   font-size: 13px;
+  padding: 5px 10px;
 }
 
 .btn-all:hover {
@@ -235,10 +236,6 @@ body {
   }
   #konten {
     padding: 0px;
-  }
-
-  .notifmargin {
-    margin: 20px 20px;
   }
 }
 
@@ -283,4 +280,13 @@ input.rb {
 
 #konten {
   margin-bottom: 10px;
+}
+
+.form input#button {
+  font-size: 13px;
+}
+
+.crud {
+  margin: 1px 5px;
+  width: 60px;
 }

@@ -51,7 +51,7 @@ if ($user_id) {
     if (file_exists($file)) {
       include_once($file);
     } else {
-      echo "<div class='row justify-content-center'><div class='col-md-12'><p class='notifmargin'>Maaf, halaman tersebut tidak ditemukan!</p></div></div>";
+      echo "<div class='row justify-content-center'><div class='col-md-12'><p class='notif'>Maaf, halaman tersebut tidak ditemukan!</p></div></div>";
     }
     ?>
   </div>
