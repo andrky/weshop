@@ -6,7 +6,7 @@
   $queryKategori = mysqli_query($conn, "SELECT * FROM kategori");
 
   if (mysqli_num_rows($queryKategori) == 0) {
-    echo "<div class='row justify-content-center'><div class='col-md-12'><p class='notifmargin'>Saat ini belum ada data di dalam kategori!</p></div></div>";
+    echo "<div class='row justify-content-center'><div class='col-md-12'><p class='notifmargin'>Saat ini belum ada data di dalam menu kategori!</p></div></div>";
   } else {
     echo
     "<table id='example' class='display'>
