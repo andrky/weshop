@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once("function/helper.php");
+include_once("function/koneksi.php");
 $page = isset($_GET['page']) ? $_GET['page'] : false;
 
 $user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
@@ -25,6 +26,10 @@ $level  = isset($_SESSION['level']) ? $_SESSION['level'] : false;
   <script src="<?php echo BASE_URL . "assets/js/jquery-3.6.0.min.js"; ?>"></script>
   <script src="<?php echo BASE_URL . "assets/js/popper.min.js"; ?>"></script>
   <script src="<?php echo BASE_URL . "assets/js/bootstrap.min.js"; ?>"></script>
+  <!-- Data Tables -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <title>Weshop | Toko Barang Elektronik</title>
 </head>
 

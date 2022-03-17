@@ -11,21 +11,21 @@ $email = isset($_GET['email']) ? ($_GET['email']) : false;
 $phone = isset($_GET['phone']) ? ($_GET['phone']) : false;
 $alamat = isset($_GET['alamat']) ? ($_GET['alamat']) : false;
 if ($notif == "require") {
-  echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+  echo "<div class='row justify-content-center'><div class='col-md-4'><p class='notif'>
                   Maaf, mohon isi semua data!
                 </p></div></div>";
 } else if ($notif == "password") {
-  echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+  echo "<div class='row justify-content-center'><div class='col-md-4'><p class='notif'>
                   Maaf, password yang di isi harus sama!
                 </p></div></div>";
 } else if ($emailuse == "emailuse") {
-  echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+  echo "<div class='row justify-content-center'><div class='col-md-4'><p class='notif'>
                   Maaf, e-mail yang Anda gunakan sudah terdaftar!
                 </p></div></div>";
 }
 ?>
 
-<div id="form">
+<div class="form">
   <div class="row justify-content-center">
     <div class="col-md-4">
       <form action="<?php echo BASE_URL . "proses_register.php"; ?>" method="POST">
@@ -53,8 +53,8 @@ if ($notif == "require") {
           <label for="Nomer Telepon" class="form-label">Re-password</label>
           <input type="password" class="form-control" id="Nomer Telepon" name="re_password">
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn" id="btn-register">Register</button>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-all">Register</button>
         </div>
       </form>
     </div>

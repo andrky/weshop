@@ -5,20 +5,20 @@
 
   $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
   if ($notif == "true") {
-    echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+    echo "<div class='row justify-content-center'><div class='col-md-4'><p class='notif'>
                     Maaf, e-mail dan password anda tidak cocok!
                   </p></div></div>";
   }
 
   $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
   if ($notif == "galog") {
-    echo "<div class='row justify-content-center'><div class='col-md-4'><p id='notif'>
+    echo "<div class='row justify-content-center'><div class='col-md-4'><p class='notif'>
                       Maaf, anda harus login terlebih dahulu!
                     </p></div></div>";
   }
 ?>
 
-<div id="form">
+<div class="form">
   <div class="row justify-content-center">
     <div class="col-md-4">
       <form action="<?php echo BASE_URL . "proses_login.php"; ?>" method="POST">
@@ -30,8 +30,8 @@
           <label for="Password" class="form-label">Password</label>
           <input type="password" class="form-control" id="Password" name="password">
         </div>
-        <div class="col-12">
-          <button type="submit" class="btn" id="btn-register">Login</button>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-all">Login</button>
         </div>
       </form>
     </div>
