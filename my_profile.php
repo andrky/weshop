@@ -9,8 +9,8 @@ if ($user_id) {
 ?>
 
 <div class="row mx-0">
-  <div class="col-md-3 px-0">
-    <nav id="sidebar">
+  <div class="col-md-3 px-0" id="sidebar">
+    <nav>
       <ul id="w-resp">
         <li class="nav-item">
           <a <?php if ($module == "kategori") {

@@ -25,7 +25,7 @@
       "<tbody>
             <tr>
               <td>$no</td>
-              <td>$row[barang]</td>
+              <td>$row[nama_barang]</td>
               <td>$row[harga]</td>
               <td>$row[status]</td>
               <td>

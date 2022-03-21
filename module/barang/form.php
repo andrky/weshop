@@ -1,7 +1,10 @@
 <?php
 $barang_id = isset($_GET['barang_id']) ? $_GET['barang_id'] : false;
 
-// $kategori = "";
+$nama_barang = "";
+$spesifikasi = "";
+$stok = "";
+$harga = "";
 $status = "";
 $button = "Add";
 
@@ -16,20 +19,45 @@ $button = "Add";
 ?>
 
 <div class="form">
-  <form action="<?php echo BASE_URL . "module/kategori/action.php?barang_id=$barang_id"; ?>" method="POST">
+  <form action="<?php echo BASE_URL . "module/barang/action.php?barang_id=$barang_id"; ?>" method="POST" enctype="multipart/form-data">
     <div class="mb-3">
       <label for="E-mail" class="form-label">Kategori</label>
       <span>
-      <br>
+        <br>
         <select name="kategori_id" class="form-control">
           <?php
-            $query = mysqli_query($conn, "SELECT * FROM kategori WHERE status='on'");
-            while($row=mysqli_fetch_assoc($query)){
-              echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
-            }
+          $query = mysqli_query($conn, "SELECT kategori_id, kategori FROM kategori WHERE status='on' ORDER BY kategori ASC ");
+          while ($row = mysqli_fetch_assoc($query)) {
+            echo "<option value='$row[kategori_id]'>$row[kategori]</option>";
+          }
           ?>
         </select>
       </span>
+    </div>
+
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">Nama Barang</label>
+      <input type="text" class="form-control" name="nama_barang" value="<?php echo $nama_barang; ?>">
+    </div>
+
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">Spesifikasi</label>
+      <textarea class="form-control" name="spesifikasi" value="<?php echo $spesifikasi; ?>"></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">Stok</label>
+      <input type="text" class="form-control" name="stok" value="<?php echo $stok; ?>">
+    </div>
+
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">Harga</label>
+      <input type="text" class="form-control" name="harga" value="<?php echo $harga; ?>">
+    </div>
+
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">Gambar</label>
+      <input type="file" class="form-control" name="file">
     </div>
 
     <div class="mb-3">
